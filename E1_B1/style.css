@@ -1,0 +1,108 @@
+body {
+    background: rgb(34,193,195);
+    background: linear-gradient(135deg, rgb(34, 136, 195) 0%,     rgb(253, 45, 243) 100%);
+    font-family: "work sans";
+}
+.wrapper {
+    width: 500px;
+    background-color: aliceblue;
+    height: 680px;
+    margin-top: 70px;
+    margin-left: 500px;
+    border-radius: 10px;
+}
+.word-login{
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 39px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'open sans', sans-serif;
+}
+.sign-up {
+    font-size: 25px;
+}
+input {
+    outline: none;
+    border: none;
+    
+    border-bottom: 1px solid  gray;
+    
+}
+.info{
+    font-family: Poppins-Medium;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.2;
+    display: block;
+    width: 80%;
+    height: 55px;
+    background: 0 0;
+    margin-left: 40px;
+    padding: 0 7px 0px 43px;
+}
+.txt{
+    padding-left: 50px;
+}
+
+.username {
+    margin-top: 20px;
+}
+.password{
+    margin-top: 30px;
+}
+.bot{
+    
+    
+    border-radius: 40px;
+    background: rgb(34,193,195);
+    font-family: "work sans";
+    background: linear-gradient(135deg, rgb(34, 136, 195) 0%,     rgb(253, 45, 243) 100%);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    color: white;
+    
+
+}
+.forgot:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+.bot:hover{
+    cursor: pointer;
+    background: rgb(34,193,195);
+    background: linear-gradient(135deg, rgb(34, 136, 195) 100%,     rgb(253, 45, 243) 0%);
+    font-family: "work sans";
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100px;
+  }
+
+
+

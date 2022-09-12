@@ -1,0 +1,175 @@
+.footer {
+    background-color: #333;
+    padding-bottom: 200px;
+
+}
+
+.txt-footer {
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    color: white;
+    line-height: 1.2;
+    text-align: left;
+    padding-top: 40px;
+    font-family: 'open sans', sans-serif;
+}
+
+.txt-under {
+    color: #8c8c8c;
+    font-family: Poppins-Bold;
+    font-size: 15px;
+
+    line-height: 1.2;
+    text-align: left;
+    padding-top: 10px;
+    font-family: 'open sans', sans-serif;
+}
+
+.input {
+    padding-top: 10px;
+
+}
+
+input {
+
+    border: auto;
+    border-radius: 50px;
+    border-color: #333 ;
+    background: #4d4d4d ;
+    color: white;
+    padding-left: 10px;
+}
+textarea{
+    color: white;
+    background-color: #4d4d4d;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+#btn-1 {
+    
+    
+    
+    background-color: rgb(0, 149, 255);
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+}
+#btn-2 {
+    
+    
+    
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    text-align: center;
+    width: 70%;
+    padding: 5px;
+    
+    
+    
+}
+#btn-2:hover{
+    background-color: rgb(0, 149, 255);
+    color: white;
+    cursor: pointer;
+    border: 1px solid;
+    
+}
+#btn-1:hover{
+    background-color: #4d4d4d;
+    color: rgb(0, 149, 255);
+    cursor: pointer;
+    border: 1px solid;
+}
+.body-1{
+    
+    background-color: rgb(0, 149, 255);
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.input-mail{
+    background-color: white;
+    width: 100%;
+    border-width: 1px;
+    border-color: aliceblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.body-2{
+    background-color: #d8dde1;
+    padding-bottom: 100px;
+}
+.heading{
+    font-family: "Oswald", sans-serif;
+}
+.img-small{
+    height: 25%;
+    width:25%;
+    border-radius: 50%;
+    padding-left: 10px;
+}
+.ele{
+    background-color: white;
+    padding-top:30px;
+    padding-bottom:30px;
+    
+    
+}
+.jacob{
+    font-weight: 600;
+}
+#banner{
+    height: 100%;
+    width: 100%;
+}
+.body-3{
+    background-color:whitesmoke;
+    
+}
+#sign{
+    height: 20%;
+    width: 20%;
+}
+#img-text{
+    text-align: justify;
+    max-width: 40%;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 100px;
+}
+p{
+    font-family: Poppins-Bold;
+    font-size: 25px;
+    color: gray;
+    line-height: 1.2;
+    text-align: left;
+    font-family: 'open sans', sans-serif;
+}
+.body-5{
+    background-color: #d8dde1;
+    padding-bottom: 100px;
+}
+ .wrap-icon {
+    height: 60px;
+    width: 60px;
+    display: block;
+    border: 1px solid #1c63fb;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.body-6{
+    background-color: #1c63fb;
+}
+#book{
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+
