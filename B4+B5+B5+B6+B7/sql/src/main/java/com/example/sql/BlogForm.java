@@ -1,7 +1,7 @@
 package com.example.sql;
 
 
-
+import org.springframework.web.multipart.MultipartFile;
 
 public class BlogForm{
 
@@ -10,19 +10,14 @@ public class BlogForm{
 
     private String title;
 
-    private String cover;
+
 
     private String content;
 
-    private String file;
+    private MultipartFile[] file;
+    private Category category;
 
-    public BlogForm(int id, String title, String cover, String content,String file) {
-        this.id = id;
-        this.title = title;
-        this.cover = cover;
-        this.content = content;
-        this.file = file;
-    }
+
     public BlogForm(){
 
     }
@@ -43,13 +38,7 @@ public class BlogForm{
         this.title = title;
     }
 
-    public String getCover() {
-        return cover;
-    }
 
-    public void setCover(String cover) {
-        this.cover = cover;
-    }
 
     public String getContent() {
         return content;
@@ -59,12 +48,29 @@ public class BlogForm{
         this.content = content;
     }
 
-    public String getFile() {
+    public MultipartFile[] getFile() {
         return file;
     }
 
-    public void setFile(String file) {
+    public void setFile(MultipartFile[] file) {
         this.file = file;
+    }
+
+    public BlogForm(int id, String title, String content, MultipartFile[] file, Category category) {
+        this.id = id;
+        this.title = title;
+
+        this.content = content;
+        this.file = file;
+        this.category = category;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
 

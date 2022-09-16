@@ -1,5 +1,7 @@
 package com.example.sql;
-
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import com.example.sql.Blog;
 import com.example.sql.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +19,19 @@ public class BlogService{
         System.out.println(repo.findAll());
         return (List<Blog>) repo.findAll();
     }
+    public List<Blog> listAllFilter(int id){
+        return repo.getBlogByCategory_Id(id);
+    }
 
 
     public void save(Blog blog) {
         repo.save(blog);
     }
+
+    public Blog saveAndReturn(Blog blog) {
+        return repo.save(blog);
+    }
+
     public Blog get(Integer id){
         Optional<Blog> result = repo.findById(id);
         if(result.isPresent()){
@@ -37,11 +47,13 @@ public class BlogService{
                 .orElseThrow(() -> new IllegalArgumentException("Blog not exits " + id));
         if (blog1 != null) {
             blog1.setTitle(blog.getTitle());
-            blog1.setCover(blog.getCover());
+            blog1.setCategory(blog.getCategory());
             blog1.setContent(blog.getContent());
             blog1.setFile(blog.getFile());
             return repo.save(blog1);
         }
         return null;
     }
+
+
 }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: #ffdde1">
+
+<br>
+<div class="text-center"  style="margin-top: 30px;"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="loadData(0,'','','','')">
+Create
+</button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Category
+        </button>
+        <div class="dropdown-menu">
+            <a th:href="@{/getdata}" th:text="All"  class="dropdown-item"></a>
+            <li th:each="c : ${listCate}">
+                <a th:href="@{/getdata(id=${c.id})}" th:text="${c.name}" class="dropdown-item"></a>
+            </li>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container"  style="margin-top: 30px;background-color: aliceblue;border-radius: 10px">
+    <table class="table">
+        <thead class="thead" style="color: white;">
+        <tr class="text-center" style="color: black;">
+            <th>ID</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th>Title</th>
+            <th>File</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody  class="thead-light">
+        <th:block th:each="user : ${listBlog}">
+            <tr  class="text-center" style="font-size: 22px;">
+                <td>[[${user.getId()}]]</td>
+                <td>[[${user.getCategory().getName()}]]</td>
+                <td>[[${user.getContent()}]]</td>
+                <td>[[${user.getTitle()}]]</td>
+
+                <td>
+                    <th:block  th:each="img : ${user.getFile()}">
+                        <img th:src="'image/'+${img.getName()}" style="width: 300px;height: 300px;">
+                    </th:block>
+
+                </td>
+
+                <td>
+                    <button type="button" th:data-id="${user.getId()}" th:data-title="${user.getTitle()}" th:data-cover="${user.getCategory().getName()}" th:data-file="${user.getFile()}" th:data-content="${user.getContent()}" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" onclick="loadData(this.getAttribute('data-id'),this.getAttribute('data-title'),this.getAttribute('data-cover'),this.getAttribute('data-file'),this.getAttribute('data-content'))">
+                        Edit
+                    </button>
+                    <a th:href="@{/delete/{id}(id=${user.id})}" ><button class="btn btn-danger">Delete</button></a>
+                </td>
+            </tr>
+
+        </th:block>
+
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase text-center">Create/Edit New Blog</h5>
+            </div>
+            <form th:action="@{/save}" method="post"   enctype="multipart/form-data" th:object="${blog}">
+                <div class="modal-body" >
+                    <input id="id" type="hidden"  class="form-control" aria-describedby="inputGroupPrepend" th:field="*{id}" name="id"/>
+                    <div class="form-row">
+                        <div class="col-sm-6 col-md-6 col-xs-12">
+                            <label for="Title">Title</label>
+                            <input id="Title" type="text" placeholder="Title" class="form-control" aria-describedby="inputGroupPrepend" required th:field="*{title}"/>
+                            <div class="invalid-feedback">
+                                Please enter title.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-xs-12">
+                            <label for="category">Category</label><br>
+                            <select th:field="*{category}" id="category">
+                                <option th:each="c : ${listCate}" th:value="${c.id}" th:text="${c.name}"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6 col-md-6 col-xs-12">
+                            <label for="content">Content</label>
+                            <input id="content" type="text" placeholder="Content" class="form-control" aria-describedby="inputGroupPrepend" required  th:field="*{content}"/>
+                            <div class="invalid-feedback">
+                                Please enter content.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-xs-12">
+                            <label for="file_upload">File</label><br>
+                            <input id="file_upload" type="file" name="file_upload" required multiple="multiple"  th:field="*{file}"/><br>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger rounded-0" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-0" >Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--===========================================-->
+
+<!-- Carousel -->
+
+<!--===========================================-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    function loadData(id, title, category, file, content) {
+        document.getElementById('category').setAttribute('value',category);
+        document.getElementById('content').setAttribute('value',content);
+        document.getElementById('file_upload').setAttribute('value',file);
+        document.getElementById('Title').setAttribute('value',title);
+        document.getElementById('id').setAttribute('value',id);
+    }
+
+
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+</body>
+</html>
