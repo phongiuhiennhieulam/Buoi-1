@@ -1,0 +1,127 @@
+.big-text-footer{
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.small-text{
+    color:white;
+    font-weight: 350;
+    margin-top: 20px;
+    font-size: 18px;
+}
+#search-footer{
+    width: 30%;
+    border-radius:5px;
+    background-color: #393a3d;
+    border: 1px solid white;
+    padding: 5px 5px 5px 5px;
+    font-weight: 600;
+    
+}
+.flag{
+    height: 20px;
+    width: 20px;
+    
+}
+.fa-brands{
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: white;
+    text-align: center;
+}
+.footer-media{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.icon-small{
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+.text-icon{
+    font-weight: 650;
+    color: white;
+}
+.small-text-under   {
+    color:white;
+    font-weight: 300;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.para-title{
+    font-weight:bold ;
+}
+.big-text{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}
+.image-element{
+    border-radius: 5px;
+    background-color: #0d333f;
+    margin-left: 8px;
+}
+#phone{
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+}
+#resource-button{
+    font-weight: bold;font-size: 15px;color: #0d333f;background-color: white;
+}
+#help-button{
+    font-weight: bold;font-size: 15px;color: white;background-color:#0d333f ;border: 2px solid white;margin-left: 20px;
+}
+#help-button:hover{
+    background-color: white;
+    color: #0d333f;
+    
+}
+.lo-text{
+    font-size: 18px;
+    font-weight: 800;
+    
+}
+.mid-text{
+    font-size:25px;
+    font-weight: 800;
+}
+.link{
+    text-decoration: none;
+}
+.button-mid{
+    background-color: #00d7d7;
+    padding: 5px 30px 5px 30px;
+    border: none;
+    border-radius: 5px;
+}
+.slide-image{
+    border-radius: 50%;
+    
+}
+.icon-color{
+    color: black;
+}
+.text-slide{
+    font-size: 30px;
+}
+.under-text{
+    font-size: 20px;
+    
+}
+.button-right{
+    border-radius: 50%;
+    background-color: #393a3d;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.dot{
+    background-color: gray;
+    width: 10%;
+}
