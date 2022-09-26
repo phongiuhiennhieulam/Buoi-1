@@ -48,7 +48,7 @@ function showListBlog(data){
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Covers</label>
-                            <input type="file" name="files" multiple class="form-control" id="files">
+                            <input type="file" name="covers" multiple class="form-control" id="files">
                         </div>
                         <div class="mb-3">
                         <label for="list-cate">Category</label>
